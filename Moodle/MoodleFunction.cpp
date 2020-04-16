@@ -17,7 +17,6 @@ void printStudent(Student s) {
 
 void loadStudent(ifstream& f, Student& s) {
 	string temp;
-	f.ignore(500,'\n');
 	
 	getline(f, temp, ',');
 	s.Num = stoi(temp);
@@ -37,6 +36,7 @@ void loadStudent(ifstream& f, Student& s) {
 	s.Bday.Month = stoi(temp);
 	getline(f, temp, '/');
 	s.Bday.Date = stoi(temp);
-	getline(f, temp);
+	f >> temp;
 	s.Bday.Year = stoi(temp);
+
 }
