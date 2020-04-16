@@ -14,9 +14,6 @@ void printStudent(Student s) {
 		<< s.Bday.Year << endl;
 }
 
-void getDoB(string DoB) {
-
-}
 
 void loadStudent(ifstream& f, Student& s) {
 	string temp;
